@@ -1,0 +1,102 @@
+<div *ngIf="school" class="m-3">
+
+  <form [formGroup]="form">
+
+    <table class="table table-striped table-hover">
+
+      <thead>
+      <tr>
+        <th scope="col" style="width: 150px">Field</th>
+        <th scope="col">Value</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <th scope="row">id</th>
+        <td>{{school.id}}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">name</th>
+        <td>
+          <input formControlName="name" class="form-control" id="name" type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">about</th>
+        <td>
+          <textarea formControlName="about" class="form-control" id="about" type="text" rows="3"></textarea>
+        </td>
+      </tr>
+
+      <!-- LOGO -->
+      <tr>
+        <th scope="row">logo</th>
+        <td>
+          <img *ngIf="logo" src="{{logo}}" (click)="open(content, $event)" alt="logo" class="logo mb-3">
+          <div class="mb-3">
+            <input (change)="getFile($event)" placeholder="logo" formControlName="logo" type="file">
+          </div>
+          <!-- Modal window START -->
+          <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-body">
+              <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+              <img *ngIf="logo" src="{{logo}}" alt="logo" class="logo_big">
+            </div>
+          </ng-template>
+          <!-- Modal window END -->
+          <!--          <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>-->
+        </td>
+      </tr>
+
+      <!-- CITIES -->
+      <tr>
+        <th scope="row">
+          <a (click)="open(content_cities, $event)" href="">cities</a>
+        </th>
+        <td>
+          <app-city *ngFor="let city of school.cities" [city]="city"></app-city>
+        </td>
+        <!-- Modal window START -->
+        <ng-template #content_cities let-c="close" let-d="dismiss">
+
+          <div class="modal-body d-flex flex-column">
+            <button type="button" class="btn-close mb-3" aria-label="Close" (click)="d('Cross click')"></button>
+            <hr>
+            <app-cities [cities_selected]="school.cities" (cityEmitter)="catchCityEmmit($event)"></app-cities>
+            <!--                <app-city *ngFor="let city of cities" [city]="city" [select]="true"></app-city>-->
+<!--            <button type="button" class="btn btn-sm mb-3" aria-label="Close" (click)="d('Cross click')">Close</button>-->
+          </div>
+        </ng-template>
+        <!-- Modal window END -->
+      </tr>
+
+      <!-- AGES -->
+      <tr>
+        <th scope="row">ages</th>
+        <td>
+          <app-age *ngFor="let age of school.ages" [age]="age"></app-age>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">created_at</th>
+        <td>{{school.created_at | date:'medium'}}</td>
+      </tr>
+      <tr>
+        <th scope="row">updated_at</th>
+        <td>{{school.updated_at | date:'medium'}}</td>
+      </tr>
+      </tbody>
+
+    </table>
+
+    <button [disabled]="!isAuthorized" type="button" class="btn btn-dark" (click)="submit($event)">Save</button>
+
+  </form>
+
+</div>
+<div *ngIf="errors" class="text-danger">{{errors}}</div>
+<div *ngIf="message" class="activateToken m-3">{{message}}</div>

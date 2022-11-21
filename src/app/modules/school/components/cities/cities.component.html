@@ -1,0 +1,29 @@
+<div class="d-flex flex-column m-3">
+
+  <form (ngSubmit)="onSubmit($event)" [formGroup]="form">
+    <div class="form-group d-flex gap-2" *ngFor="let city of cities">
+
+<!--        *ngIf="cities_selected"-->
+      <input
+             type="checkbox"
+             formControlName="{{city.id}}"
+             class="form-check-input"
+             value=""
+             (click)="toggle(city)">
+
+      <app-city [city]="city"></app-city>
+    </div>
+
+<!--    <button [disabled]="!isAuthorized" type="button" class="btn btn-dark" (click)="submit($event)">Save</button>-->
+    <button type="submit" class="btn btn-dark mt-3">Set</button>
+
+
+<!--    <input formControlName="logo">-->
+  </form>
+
+  <router-outlet></router-outlet>
+
+</div>
+
+<div *ngIf="errors">{{errors}}</div>
+

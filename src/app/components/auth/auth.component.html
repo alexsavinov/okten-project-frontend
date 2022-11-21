@@ -1,0 +1,66 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">User login</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+
+    <form [formGroup]="form">
+
+      <div class="mb-3">
+        <label for="email">Email</label>
+        <div class="input-group">
+          <input formControlName="email" class="form-control" id="email" placeholder="username@example.com">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <input formControlName="password" class="form-control" id="password" type="password">
+        </div>
+        <div *ngIf="errors">{{errors}}</div>
+      </div>
+
+      <!--      <label>Email<input type="text" formControlName="email"></label>-->
+      <!--      <label>Password<input type="password" formControlName="password"></label>-->
+      <!--      <button type="button" (click)="save()" class="btn">Save</button>-->
+
+      <div class="modal-footer">
+        <!--        <button type="button" class="btn btn-primary" (click)="modal.close('Save btn')">Login</button>-->
+        <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close()">Close</button>
+      </div>
+
+    </form>
+  </div>
+</ng-template>
+
+<div class="d-flex flex-column align-items-start">
+
+  <div>
+    <!--    <button *ngIf="!access" class="btn btn-primary m-2" (click)="open(content)">Login</button>-->
+    <button [disabled]="isAuthorized" class="btn btn-primary m-2" (click)="login()">Login</button>
+    <button [disabled]="isAuthorized" class="btn btn-primary m-2" (click)="register()">Register</button>
+    <button [disabled]="isAuthorized" class="btn btn-primary m-2" (click)="activate()">Activate</button>
+    <button [disabled]="!isAuthorized" class="btn btn-primary m-2" (click)="refreshAction()">Refresh</button>
+    <button [disabled]="!isAuthorized" class="btn btn-primary m-2" (click)="profile()">Profile</button>
+    <button [disabled]="!isAuthorized" class="btn btn-primary m-2" (click)="logout()">Logout</button>
+  </div>
+
+
+  <div *ngIf="access" class="token m-3"><span class="fw-bold">Access token: </span>{{access}}</div>
+  <div *ngIf="refresh" class="token m-3"><span class="fw-bold">Refresh token: </span>{{refresh}}</div>
+
+    <div *ngIf="user" class="m-3"><span class="fw-bold">User: </span>{{user | json}}</div>
+
+<!--      <app-user [user]="user"></app-user>-->
+
+
+</div>
+
+<div>
+  {{closeResult}}
+</div>
+
+<router-outlet></router-outlet>

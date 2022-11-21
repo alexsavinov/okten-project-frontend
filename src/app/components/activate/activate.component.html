@@ -1,0 +1,31 @@
+
+<div class="card m-3 activate">
+  <div class="card-body">
+
+    <h5 class="card-title">New user activation</h5>
+
+    <form [formGroup]="form" (ngSubmit)="activate($event)">
+
+      <div class="mb-3">
+        <label for="activateToken" class="mt-3">Enter token to activate:</label>
+
+        <div class="input-group mt-1 mb-1">
+          <input formControlName="activateToken" class="form-control" id="activateToken">
+        </div>
+        <!--    <button *ngIf="!access" class="btn btn-primary m-2" (click)="login()">Login</button>-->
+
+        <div *ngIf="errors" class="text-danger">{{errors}}</div>
+
+        <button type="button" class="btn btn-primary mt-3" (click)="activate($event)">Activate</button>
+<!--        <button type="submit">Submit</button>-->
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+
+<div *ngIf="activateToken" class="activateToken m-3">Token: {{activateToken}}</div>
+
+<div *ngIf="message" class="activateToken m-3">{{message}}</div>

@@ -1,0 +1,8 @@
+<div *ngIf="school" routerLinkActive="active">
+  {{school.id}}) <a routerLink="{{school.id}}">{{school.name}}</a>
+<!--  {{school.id}}) <a (click)="emit(school)" routerLink="{{school.id}}">{{school.name}}</a>-->
+
+<!--  <button (click)="saveToStorage()" type="button" class="btn btn-secondary btn-sm m-1">-->
+<!--    saveToStorage-->
+<!--  </button>-->
+</div>

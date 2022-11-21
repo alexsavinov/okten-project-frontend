@@ -1,0 +1,54 @@
+<!--<form [formGroup]="form">-->
+<!--  <div><label>username: <input type="text" formControlName="username"></label></div>-->
+<!--  <span *ngIf="userNameError">{{userNameError}}</span>-->
+<!--  <div><label>password: <input type="text" formControlName="password"></label></div>-->
+<!--  <div><label>confirmPassword: <input type="text" formControlName="confirmPassword"></label></div>-->
+<!--  <span *ngIf="form.errors">{{form.errors['notSame']}}</span>-->
+<!--  <button [disabled]="form.invalid" (click)="register()">Register</button>-->
+<!--</form>-->
+
+<div class="card m-3 register bg-primary text-white">
+
+  <div class="card-title h5 m-3">Register with email and password:</div>
+
+  <div class="card-body">
+
+    <form [formGroup]="form">
+
+      <div class="mb-1">
+        <label for="email">Email</label>
+        <div class="input-group">
+          <input formControlName="email" class="form-control" id="email" placeholder="username@example.com">
+        </div>
+      </div>
+
+      <div class="mb-1">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <input formControlName="password" class="form-control" id="password" type="password">
+        </div>
+      </div>
+
+      <div class="mt-1">
+        <label for="confirmPassword">Confirm password</label>
+        <div class="input-group">
+          <input formControlName="confirmPassword" class="form-control" id="confirmPassword" type="password">
+        </div>
+        <div *ngIf="errors" class="text-warning errors">{{errors}}</div>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="modal-footer">
+    <!--        <button [disabled]="form.invalid" type="button" class="btn btn-primary" (click)="login()">Login</button>-->
+<!--    <button type="button" [disabled]="form.invalid" (click)="register($event)" class="btn btn-dark">Register</button>-->
+<!--    TODO [disabled]="form.invalid" -->
+    <button type="button" (click)="register($event)" class="btn btn-dark">Register</button>
+    <!--    <button type="button" class="btn btn-primary mt-3" (click)="activate($event)">Activate</button>-->
+  </div>
+
+</div>
+
+<div *ngIf="message" class="message m-3 h5">{{message}}</div>

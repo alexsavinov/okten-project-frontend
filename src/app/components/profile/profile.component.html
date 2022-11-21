@@ -1,0 +1,90 @@
+<div class="card m-3 profile">
+  <div class="card-body" *ngIf="user">
+
+    <form [formGroup]="form" (ngSubmit)="submit($event)">
+
+      <h5 class="card-title">User</h5>
+
+      <div class="mb-3 d-flex flex-column gap-1">
+
+        <div class="form-group d-flex flex-row align-items-center">
+          <label class="me-1 label">ID:</label>
+          <input type="text" class="form-control input" placeholder="{{user.id}}" readonly>
+        </div>
+
+        <div class="form-group">
+          <label class="me-1 label form-check-label">Active</label>
+          <input type="checkbox" class="form-check-input" value="" [checked]="user.is_active" disabled>
+        </div>
+
+        <div class="form-group">
+          <label class="me-1 label form-check-label">Staff</label>
+          <input type="checkbox" class="form-check-input" value="" [checked]="user.is_staff" disabled>
+        </div>
+
+        <div class="form-group">
+          <label class="me-1 label form-check-label">Superuser</label>
+          <input type="checkbox" class="form-check-input" value="" [checked]="user.is_superuser" disabled>
+        </div>
+
+        <div class="form-group d-flex flex-row align-items-center">
+          <label class="me-1 label">Created:</label>
+          <input type="text" class="form-control input" placeholder="{{user.created_at | date:'medium'}}" readonly>
+        </div>
+
+        <div class="form-group d-flex flex-row align-items-center">
+          <label class="me-1 label">Updated:</label>
+          <input type="text" class="form-control input" placeholder="{{user.updated_at | date:'medium'}}" readonly>
+        </div>
+
+        <div class="form-group d-flex flex-row align-items-center">
+          <label class="me-1 label">Last login:</label>
+          <input type="text" class="form-control input" placeholder="{{user.last_login | date:'medium'}}" readonly>
+        </div>
+
+
+        <h5 class="card-title mt-3">Profile</h5>
+
+        <div class="form-group d-flex flex-row align-items-center">
+          <label class="me-1 label">Name:</label>
+          <input type="text" class="form-control input" formControlName="name">
+        </div>
+
+        <div class="form-group d-flex flex-row align-items-center">
+          <label class="me-1 label">Surname:</label>
+          <input type="text" class="form-control input" formControlName="surname">
+        </div>
+
+        <div class="form-group d-flex flex-row align-items-center">
+          <label class="me-1 label">Phone:</label>
+          <input type="tel" class="form-control input" formControlName="phone" value="{{user.profile.phone}}">
+        </div>
+
+        <div class="form-group d-flex flex-row align-items-center">
+          <label class="me-1 label">Born date:</label>
+          <input type="date" class="form-control input" formControlName="born" value="{{user.profile.born}}">
+        </div>
+
+
+        <h5 class="card-title mt-3">Avatar</h5>
+
+        <img src="{{avatar}}" alt="avatar" class="avatar">
+
+        <div class="mb-3">
+          <input (change)="getFile($event)" placeholder="avatar" formControlName="avatar" type="file">
+        </div>
+
+
+        <div *ngIf="errors" class="text-danger">{{errors}}</div>
+
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-3">Save</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<div *ngIf="message" class="activateToken m-3">{{message}}</div>

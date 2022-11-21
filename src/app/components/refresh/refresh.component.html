@@ -1,0 +1,36 @@
+
+<div class="card m-3 activate">
+  <div class="card-body">
+
+    <h5 class="card-title">Refresh access token</h5>
+
+    <form [formGroup]="form" (ngSubmit)="refresh($event)">
+
+      <div class="mb-3">
+
+        <label for="accessToken" class="mt-3">Current access token:</label>
+        <div class="input-group mt-1 mb-1">
+          <input id="accessToken" formControlName="accessToken" class="form-control" readonly>
+        </div>
+
+        <label for="refreshToken" class="mt-3">Current refresh token:</label>
+        <div class="input-group mt-1 mb-1">
+          <input formControlName="refreshToken" class="form-control" id="refreshToken" readonly>
+        </div>
+        <!--    <button *ngIf="!access" class="btn btn-primary m-2" (click)="login()">Login</button>-->
+
+        <div *ngIf="errors" class="text-danger">{{errors}}</div>
+
+<!--        <button type="submit">Submit</button>-->
+      </div>
+        <button type="submit" class="btn btn-primary mt-3">Refresh</button>
+
+    </form>
+
+  </div>
+</div>
+
+
+<!--<div *ngIf="refreshToken" class="refreshToken m-3">Token: {{refreshToken}}</div>-->
+
+<div *ngIf="message" class="refreshToken m-3">{{message}}</div>

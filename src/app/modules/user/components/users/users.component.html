@@ -1,1 +1,84 @@
-<p class="badge mt-5">users works!</p>
+<div class="d-flex flex-column">
+  <div *ngIf="errors">{{errors}}</div>
+  <!--  <div class="left">-->
+  <button (click)="readFromStorage()" type="button" class="btn btn-secondary btn-sm m-1">
+    readFromStorage
+  </button>
+  <!--      {{ "readFromStorage" | custom: "r":"R"}}-->
+  <app-user *ngFor="let user of users" [user]="user" (userEmitter)="catchUserEmit($event)" class="m-1"></app-user>
+  <!--  </div>-->
+
+  <router-outlet></router-outlet>
+</div>
+
+
+<!--<p class="d-flex">users works!</p>-->
+<!--<p class="btn">users works!</p>-->
+<!--<p class="h1">users works!</p>-->
+
+<!--<star-rating [starType]="'svg'" [rating]="1.63"></star-rating>-->
+
+<!--<ngb-rating [max]="5" [(rate)]="starRating" [readonly]="false">-->
+<!--    <ng-template let-fill="fill" >-->
+<!--    <span [class.filled]="fill === 100" [class.notfilled]="fill === 0">-->
+<!--      <span class="paintedHeart" [style.width.%]="fill"></span>♥-->
+<!--    </span>-->
+<!--  </ng-template>-->
+<!--</ngb-rating>-->
+
+<!--<p class="h1">Rating demo</p>-->
+<!--<ngb-rating [(rate)]="selected" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly"></ngb-rating>-->
+<!--<hr>-->
+<!--<pre>-->
+<!--  Selected: <b>{{selected}}</b>-->
+<!--  Hovered: <b>{{hovered}}</b>-->
+<!--</pre>-->
+<!--<p class="btn btn-sm btn-outline-{{readonly ? 'danger' : 'success'}}" (click)="readonly = !readonly">-->
+<!--  {{ readonly ? "readonly" : "editable"}}-->
+<!--</p>-->
+
+
+<!--<ngb-rating [(rate)]="starRating">-->
+<!--  <ng-template let-fill="fill">-->
+<!--    <span class="defaultHeart" [class.filled]="fill === 100">-->
+<!--      <span class="paintedHeart" [style.width.%]="fill">♥</span>♥-->
+<!--    </span>-->
+<!--  </ng-template>-->
+<!--</ngb-rating>-->
+<!--<div>-->
+<!--  <input type="text" [(ngModel)]="txtRateValue"/>-->
+<!--  <button type="button" (click)="updateRating()">Update Rating</button>-->
+<!--</div>-->
+
+<!--<ngb-rating [max]="5" [(rate)]="1" [readonly]="false"></ngb-rating>-->
+
+<!--<hr>-->
+<!--<p class="h1">Pagination demo</p>-->
+<!--<ngb-pagination [collectionSize]="50" [(page)]="currentPage" size="sm"></ngb-pagination>-->
+
+
+<!--<hr>-->
+<!--<p class="h1">Carousel demo</p>-->
+
+<!--<div class="d-flex m-1">-->
+<!--  <ngb-carousel *ngIf="images">-->
+<!--    <ng-template ngbSlide>-->
+<!--      <div class="picsum-img-wrapper">-->
+<!--        <img [src]="images[0]" alt="Random first slide">-->
+<!--      </div>-->
+<!--      <div class="carousel-caption">-->
+<!--        <h3>First slide label</h3>-->
+<!--        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>-->
+<!--      </div>-->
+<!--    </ng-template>-->
+<!--    <ng-template ngbSlide>-->
+<!--      <div class="picsum-img-wrapper">-->
+<!--        <img [src]="images[1]" alt="Random second slide">-->
+<!--      </div>-->
+<!--      <div class="carousel-caption">-->
+<!--        <h3>Second slide label</h3>-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
+<!--      </div>-->
+<!--    </ng-template>-->
+<!--  </ngb-carousel>-->
+<!--</div>-->
