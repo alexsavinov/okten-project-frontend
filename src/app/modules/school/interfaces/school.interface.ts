@@ -5,6 +5,7 @@ export interface ISchool {
   logo: string;
   cities: ICity[];
   ages?: IAge[];
+  learn_formats?: ILearnFormat[];
   created_at: string;
   updated_at: string;
 }
@@ -15,6 +16,11 @@ export interface ICity {
 }
 
 export interface IAge {
+  id?: number;
+  name: string;
+}
+
+export interface ILearnFormat {
   id?: number;
   name: string;
 }

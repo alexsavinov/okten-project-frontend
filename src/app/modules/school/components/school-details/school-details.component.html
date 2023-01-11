@@ -81,6 +81,14 @@
         </td>
       </tr>
 
+      <!-- LEARN FORMATS -->
+      <tr>
+        <th scope="row">learn_formats</th>
+        <td>
+          <app-learn_format *ngFor="let learnFormat of school.learn_formats" [learnFormat]="learnFormat"></app-learn_format>
+        </td>
+      </tr>
+
       <tr>
         <th scope="row">created_at</th>
         <td>{{school.created_at | date:'medium'}}</td>

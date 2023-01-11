@@ -13,6 +13,7 @@ import {SchoolComponent} from './components/school/school.component';
 import {SchoolsComponent} from './components/schools/schools.component';
 import {SchoolDetailsComponent} from './components/school-details/school-details.component';
 import {SchoolResolveService, SchoolService} from "../school/services";
+import {LearnFormatComponent} from "./components/learn_format/learn_format.component";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {SchoolResolveService, SchoolService} from "../school/services";
     SchoolDetailsComponent,
     CityComponent,
     CitiesComponent,
-    AgeComponent
+    AgeComponent,
+    LearnFormatComponent
   ],
   imports: [
     CommonModule,
