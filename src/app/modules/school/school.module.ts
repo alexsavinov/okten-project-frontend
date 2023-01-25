@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 
-
 import {AgeComponent} from '../course/components/age/age.component';
 import {CitiesComponent} from "./components/cities/cities.component";
 import {CityComponent} from './components/city/city.component';

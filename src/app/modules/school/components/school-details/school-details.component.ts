@@ -1,11 +1,11 @@
 import {ActivatedRoute} from "@angular/router";
 import {Component, Input, OnInit} from '@angular/core';
+import {Form, FormControl, FormGroup, Validators} from "@angular/forms";
+import {NgbModal, NgbModalConfig} from "@ng-bootstrap/ng-bootstrap";
 
 import {ICity, ISchool} from "../../interfaces";
 import {SchoolService} from "../../services";
-import {Form, FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../../user/services/auth.service";
-import {NgbModal, NgbModalConfig} from "@ng-bootstrap/ng-bootstrap";
 
 
 @Component({
