@@ -1,0 +1,39 @@
+.menu {
+  height: 40px;
+  background-color: white;
+  //font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.menu-item {
+
+}
+
+a {
+  text-decoration: none;
+  color: #173647;
+}
+
+.active a{
+  color: black;
+}
+
+//.access a{
+//  display: flex;
+//  gap: 10px;
+//}
+
+
+.yellow-line {
+  height: 15px;
+  background-color: #FAE300;
+}
+
+.ico {
+  height: 22px;
+}

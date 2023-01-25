@@ -3,9 +3,17 @@ export interface ISchool {
   name: string;
   about: string;
   logo: string;
+  homework: string;
+  certificate: string;
+  internship: string;
+  site: string;
+  facebook: string;
+  instagram: string;
+  telegram: string;
+  tiktok: string;
+  youtube: string;
   cities: ICity[];
-  ages?: IAge[];
-  learn_formats?: ILearnFormat[];
+  comments: IComment[];
   created_at: string;
   updated_at: string;
 }
@@ -15,14 +23,13 @@ export interface ICity {
   name: string;
 }
 
-export interface IAge {
+export interface IComment {
   id?: number;
-  name: string;
-}
-
-export interface ILearnFormat {
-  id?: number;
-  name: string;
+  school_id?: number;
+  author: string;
+  text: string;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface IServerResponseSchools {

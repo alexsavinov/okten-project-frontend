@@ -35,6 +35,7 @@ const routes: Routes = [
       {path: 'profile', component: ProfileComponent},
       {path: 'users', loadChildren: () => import('./modules').then(value => value.UserModule)},
       {path: 'schools', loadChildren: () => import('./modules').then(value => value.SchoolModule)},
+      {path: 'courses', loadChildren: () => import('./modules').then(value => value.CourseModule)},
     ]
   },
   {path: '**', pathMatch: 'full', component: PagenotfoundComponent},

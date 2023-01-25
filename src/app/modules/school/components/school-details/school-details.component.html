@@ -31,6 +31,69 @@
         </td>
       </tr>
 
+      <tr>
+        <th scope="row">homework</th>
+        <td>
+          <input formControlName="homework" id="homework" type="checkbox" [checked]="school.homework">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">certificate</th>
+        <td>
+          <input formControlName="certificate" id="certificate" type="checkbox" [checked]="school.certificate">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">internship</th>
+        <td>
+          <input formControlName="internship" id="internship" type="checkbox" [checked]="school.internship">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">site</th>
+        <td>
+          <input formControlName="site" id="site" type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">facebook</th>
+        <td>
+          <input formControlName="facebook" id="facebook" type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">instagram</th>
+        <td>
+          <input formControlName="instagram" id="instagram" type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">telegram</th>
+        <td>
+          <input formControlName="telegram" id="telegram" type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">tiktok</th>
+        <td>
+          <input formControlName="tiktok" id="tiktok" type="text">
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">youtube</th>
+        <td>
+          <input formControlName="youtube" id="youtube" type="text">
+        </td>
+      </tr>
+
       <!-- LOGO -->
       <tr>
         <th scope="row">logo</th>
@@ -67,27 +130,35 @@
             <hr>
             <app-cities [cities_selected]="school.cities" (cityEmitter)="catchCityEmmit($event)"></app-cities>
             <!--                <app-city *ngFor="let city of cities" [city]="city" [select]="true"></app-city>-->
-<!--            <button type="button" class="btn btn-sm mb-3" aria-label="Close" (click)="d('Cross click')">Close</button>-->
+            <!--            <button type="button" class="btn btn-sm mb-3" aria-label="Close" (click)="d('Cross click')">Close</button>-->
           </div>
         </ng-template>
         <!-- Modal window END -->
       </tr>
 
-      <!-- AGES -->
+      <!-- COMMENTS -->
       <tr>
-        <th scope="row">ages</th>
+        <th scope="row">comments</th>
         <td>
-          <app-age *ngFor="let age of school.ages" [age]="age"></app-age>
+          <app-comment *ngFor="let comment of school.comments" [comment]="comment"></app-comment>
         </td>
       </tr>
 
-      <!-- LEARN FORMATS -->
-      <tr>
-        <th scope="row">learn_formats</th>
-        <td>
-          <app-learn_format *ngFor="let learnFormat of school.learn_formats" [learnFormat]="learnFormat"></app-learn_format>
-        </td>
-      </tr>
+      <!--      &lt;!&ndash; AGES &ndash;&gt;-->
+      <!--      <tr>-->
+      <!--        <th scope="row">ages</th>-->
+      <!--        <td>-->
+      <!--          <app-age *ngFor="let age of school.ages" [age]="age"></app-age>-->
+      <!--        </td>-->
+      <!--      </tr>-->
+
+      <!--      &lt;!&ndash; LEARN FORMATS &ndash;&gt;-->
+      <!--      <tr>-->
+      <!--        <th scope="row">learn_formats</th>-->
+      <!--        <td>-->
+      <!--          <app-learn_format *ngFor="let learnFormat of school.learn_formats" [learnFormat]="learnFormat"></app-learn_format>-->
+      <!--        </td>-->
+      <!--      </tr>-->
 
       <tr>
         <th scope="row">created_at</th>

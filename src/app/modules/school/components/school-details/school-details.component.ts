@@ -6,7 +6,6 @@ import {SchoolService} from "../../services";
 import {Form, FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../../user/services/auth.service";
 import {NgbModal, NgbModalConfig} from "@ng-bootstrap/ng-bootstrap";
-import {IUser} from "../../../user/interfaces";
 
 
 @Component({
@@ -67,6 +66,15 @@ export class SchoolDetailsComponent implements OnInit {
       name: new FormControl(school.name,
         [Validators.required, Validators.minLength(2), Validators.maxLength(20)]),
       about: new FormControl(school.about),
+      homework: new FormControl(school.homework),
+      certificate: new FormControl(school.certificate),
+      internship: new FormControl(school.internship),
+      site: new FormControl(school.site),
+      facebook: new FormControl(school.facebook),
+      instagram: new FormControl(school.instagram),
+      telegram: new FormControl(school.telegram),
+      tiktok: new FormControl(school.tiktok),
+      youtube: new FormControl(school.youtube),
       logo: new FormControl(null),
     })
   }
@@ -93,13 +101,13 @@ export class SchoolDetailsComponent implements OnInit {
     // console.log(this.school);
 
 
-    // update profile
+    // update school
     this.schoolService.update(this.school).subscribe(
       value => {
         console.log('school value:', value);
         this.message = this.message + "School data was successfully updated! ";
 
-        // update avatar
+        // update logo
         if (rawValue.logo) {
           const formData = new FormData();
           formData.append('id', '' + this.school.id);

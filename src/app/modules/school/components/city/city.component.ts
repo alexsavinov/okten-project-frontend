@@ -13,7 +13,8 @@ export class CityComponent implements OnInit {
   @Input()
   select: boolean
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
