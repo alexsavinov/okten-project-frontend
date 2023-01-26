@@ -1,7 +1,7 @@
 import {ActivatedRoute} from "@angular/router";
 import {Component, Input, OnInit} from '@angular/core';
 import {Form, FormControl, FormGroup, Validators} from "@angular/forms";
-import {NgbModal, NgbModalConfig} from "@ng-bootstrap/ng-bootstrap";
+// import {NgbModal, NgbModalConfig} from "@ng-bootstrap/ng-bootstrap";
 
 import {ICity, ISchool} from "../../interfaces";
 import {SchoolService} from "../../services";
@@ -29,13 +29,14 @@ export class SchoolDetailsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute,
               private schoolService: SchoolService,
               private authService: AuthService,
-              config: NgbModalConfig,
-              private modalService: NgbModal) {
+              // config: NgbModalConfig,
+              // private modalService: NgbModal
+  ) {
 
     // config.backdrop = 'static';
     // config.keyboard = false;
-    config.size = "xl";
-    config.scrollable = true;
+    // config.size = "xl";
+    // config.scrollable = true;
   }
 
   ngOnInit(): void {
@@ -162,7 +163,7 @@ export class SchoolDetailsComponent implements OnInit {
 
   open(content: any, event: Event): void {
     event.preventDefault();
-    this.modalService.open(content);
+    // this.modalService.open(content);
   }
 
 
@@ -173,6 +174,6 @@ export class SchoolDetailsComponent implements OnInit {
     }
     // this.userEmitter.emit(userCatch);
     // this.users = this.users.filter(i => i.id != userCatch.id);
-    this.modalService.dismissAll();
+    // this.modalService.dismissAll();
   }
 }

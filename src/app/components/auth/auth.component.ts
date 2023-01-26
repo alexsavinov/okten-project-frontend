@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
+// import {ModalDismissReasons, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {Router} from "@angular/router";
 
 import {AuthService} from "../../modules/user/services/auth.service";
@@ -28,7 +28,7 @@ export class AuthComponent implements OnInit {
   closeResult = '';
 
   constructor(
-    private modalService: NgbModal,
+    // private modalService: NgbModal,
     private authService: AuthService,
     private userService: UserService,
     private router: Router
@@ -76,20 +76,20 @@ export class AuthComponent implements OnInit {
 
 
   open(content: any) {
-    this.modalService.open(
-      content,
-      {
-        ariaLabelledBy: 'modal-basic-title'
-        // , modalDialogClass: 'dark-modal', windowClass: 'dark-modal'
-      }
-    ).result.then(() => {
-      this.login();
-      // this.closeResult = `Closed with: ${result}`;
-      // }, (reason) => {
-      // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    }).catch(e => {
-      // console.log('e=' + e);
-    });
+    // this.modalService.open(
+    //   content,
+    //   {
+    //     ariaLabelledBy: 'modal-basic-title'
+    //     // , modalDialogClass: 'dark-modal', windowClass: 'dark-modal'
+    //   }
+    // ).result.then(() => {
+    //   this.login();
+    //   // this.closeResult = `Closed with: ${result}`;
+    //   // }, (reason) => {
+    //   // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    // }).catch(e => {
+    //   // console.log('e=' + e);
+    // });
   }
 
   private getDismissReason(reason: any, content: any = null): string {

@@ -1,6 +1,5 @@
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {NgModule} from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -19,6 +18,7 @@ import {PagenotfoundComponent} from './components/pagenotfound/pagenotfound.comp
 import {ProfileComponent} from './components/profile/profile.component';
 import {RefreshComponent} from "./components/refresh/refresh.component";
 import {RegisterComponent} from "./components/register/register.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -40,10 +40,10 @@ import {RegisterComponent} from "./components/register/register.component";
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbModule,
     FontAwesomeModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {

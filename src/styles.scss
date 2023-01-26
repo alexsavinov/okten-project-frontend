@@ -12,7 +12,7 @@
 //  "danger": $danger
 //);
 
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
 
 
 // Custom.scss
@@ -37,3 +37,9 @@
 //@import "~bootstrap/scss/grid";
 
 // 5. Add additional custom code here
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
