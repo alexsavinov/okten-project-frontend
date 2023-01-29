@@ -3,6 +3,10 @@ import {NgModule} from '@angular/core';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CarouselModule} from 'ngx-bootstrap/carousel';
+import {AccordionModule} from "ngx-bootstrap/accordion";
+import {AlertConfig, AlertModule} from "ngx-bootstrap/alert";
 
 import {ActivateComponent} from './components/activate/activate.component';
 import {AppComponent} from './app.component';
@@ -18,7 +22,6 @@ import {PagenotfoundComponent} from './components/pagenotfound/pagenotfound.comp
 import {ProfileComponent} from './components/profile/profile.component';
 import {RefreshComponent} from "./components/refresh/refresh.component";
 import {RegisterComponent} from "./components/register/register.component";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -43,14 +46,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FontAwesomeModule,
     ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AlertModule,
+    AccordionModule,
+    CarouselModule
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       multi: true,
       useClass: MainInterceptor
-    }
+    },
+    AlertConfig
   ],
   bootstrap: [AppComponent]
 })

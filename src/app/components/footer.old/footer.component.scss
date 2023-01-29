@@ -1,5 +1,5 @@
 .menu {
-  height: 65px;
+  height: 40px;
   background-color: white;
   //font-size: 20px;
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 .menu-item {
-  color: #135fad
+
 }
 
 a {
@@ -38,6 +38,12 @@ a {
   height: 22px;
 }
 
-.logo {
-  height: 52px;
+.footer {
+  height: 20px;
+}
+
+.v-line {
+  width: 1px;
+  height: 11px;
+  background-color: #999999;
 }

@@ -1,0 +1,20 @@
+<!--<div class="menu d-flex yellow-line footer justify-content-between">-->
+
+<!--</div>-->
+
+<footer class="bg-dark  footer fixed-bottom">
+  <div class="d-flex flex-row text-center align-items-center justify-content-between w-100">
+
+    <div *ngIf="email" class="ms-1 badge badge-secondary text-info d-flex align-items-center">
+      {{email}}
+    </div>
+
+
+    <div *ngIf="version" class="ms-1 badge badge-secondary text-light d-flex align-items-center">
+      <div class="v-line"></div>
+      <div class="ms-2 me-2">ver {{version}}</div>
+    </div>
+
+  </div>
+
+</footer>

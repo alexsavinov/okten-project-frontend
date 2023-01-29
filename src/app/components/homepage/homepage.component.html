@@ -1,73 +1,37 @@
 <div class="d-flex flex-column align-items-center" xmlns="http://www.w3.org/1999/html">
 
 
-  <div class="d-flex justify-content-between w-100">
+  <!-- NEWS (slider 5 items) -->
+  <!--    <div style="width: 500px; height: 500px;">-->
+  <div class="_news">
 
-    <div class="d-flex flex-column ms-5 mt-3">
-      <div>MapIT</div>
-      <div>Доступно про ІТ навчання дітей</div>
+    <div class="_carousel">
+      <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
+        <slide *ngFor="let slide of slides; let index=index">
+<!--          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">-->
+          <img [src]="slide.image" class="news_image" alt="school image">
+          <div class="carousel-caption">
+            <h4>Slide {{index}}</h4>
+            <p>{{slide.text}}</p>
+          </div>
+        </slide>
+      </carousel>
     </div>
 
-    <div class="social-links d-flex align-items-center justify-content-evenly me-5 mt-3">
-
-<!--      <a href="https://www.instagram.com/_map_it" target="_blank">-->
-<!--        <fa-icon [icon]="faInstagram" [inverse]="true"></fa-icon>-->
-<!--      </a>-->
-
-<!--      <a href="https://www.facebook.com/MapIT.4kids/" target="_blank">-->
-<!--        <fa-icon [icon]="faFacebookF" [inverse]="true"></fa-icon>-->
-<!--      </a>-->
-
-<!--      <a href="https://t.me/map_IT_Ukraine" target="_blank">-->
-<!--        <fa-icon [icon]="faTelegram" [inverse]="true"></fa-icon>-->
-<!--      </a>-->
-
-    </div>
-  </div>
-
-  <div class="d-flex flex-column text-center m-5 w-75">
-    <div class="display-2">Свобода -</div>
-    <div class="display-2">наша цінність</div>
-    <div class="h4 m-3">Свобода особистості, свобода пересування, свобода слова,
-      свобода в будь-якому прояві.
-    </div>
-    <div class="h4">І тому наша місія - допогти дітям на карті можливостей
-      знайти свій особистий шлях до свободи,
-      завдяки ІТ освіті та самореалізації.
+    <br/>
+    <div>
+      <div class="checkbox">
+        <label><input type="checkbox" [(ngModel)]="noWrapSlides">Disable Slide Looping</label>
+        <label><input type="checkbox" [(ngModel)]="showIndicator">Enable Indicator</label>
+      </div>
     </div>
   </div>
 
-  <div class="d-flex w-100 justify-content-end bg-primary mt-5">
-    <div class="main-info d-flex flex-column align-items-start w-50 fs-5 p-4">
-
-      <div class="h4"><span class="fw-bolder">MapIT</span> - це актуальна інформація:</div>
-      <div>про напрямки ІТ навчання дітей</div>
-      <div>про онлайн курси</div>
-      <div>про офлайн школи</div>
-      <div>про навчання в містах України</div>
-      <div>про безпеку в мережі</div>
-      <div>про здоров'я юного айтішника</div>
-      <div class="h3 mt-3">Читайте нас де вам зручно:</div>
-
-<!--      <div class="d-flex w-100 gap-3">-->
-<!--        <a class="text-black" href="https://www.instagram.com/_map_it" target="_blank">-->
-<!--          <fa-icon [icon]="faInstagram" [inverse]="false" size="2x"></fa-icon>-->
-<!--        </a>-->
-<!--        <a class="text-black"  href="https://www.facebook.com/MapIT.4kids/" target="_blank">-->
-<!--          <fa-icon [icon]="faFacebookF" [inverse]="false" size="2x"></fa-icon>-->
-<!--        </a>-->
-<!--        <a class="text-black"  href="https://t.me/map_IT_Ukraine" target="_blank">-->
-<!--          <fa-icon [icon]="faTelegram" [inverse]="false" size="2x"></fa-icon>-->
-<!--        </a>-->
-<!--      </div>-->
-
-    </div>
-
-  </div>
-
-  <div class="h1 m-5">
-    Корисна інформація
-  </div>
+  <!-- SCHOOLS (5 items: logo + name) -->
+  <!-- ABOUT -->
+  <!-- TESTS -->
+  <!-- NEWS -->
+  <!-- ARTICLES -->
 
 
 </div>
