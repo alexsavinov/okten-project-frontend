@@ -1,22 +1,25 @@
 <div class="d-flex flex-column align-items-center" xmlns="http://www.w3.org/1999/html">
 
-
   <!-- NEWS (slider 5 items) -->
   <div class="_news border border-1">
 
     <div class="_carousel bg-opacity-50 bg-danger">
       <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
         <slide *ngFor="let slide of slides; let index=index">
-          <div class="d-flex flex-row align-items-center">
 
-            <img [src]="slide.image" class="news_image" alt="news image">
+          <div class="news_item">
 
-            <div class="news_title ms-5 me-5">
+            <div>
+              <img [src]="slide.image" class="news_image" alt="news image">
+            </div>
+
+            <div class="news_title">
               <h4>News {{index}}</h4>
               <p>{{slide.text}}</p>
             </div>
 
           </div>
+
           <!--          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">-->
           <!--          <img [src]="slide.image" class="news_image" alt="news image">-->
           <!--          <img src="https://cegc.my.canva.site/main-mapit-website/images/a9c2b505fc162783c2e12dba777ecc99.jpg"-->
