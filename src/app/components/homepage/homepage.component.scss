@@ -11,4 +11,28 @@
 .news_image {
   height: 400px;
   width: 200px;
+  object-fit: cover;
+}
+
+
+img {
+  width: 128px;
+  height: 128px;
+  border: 1px solid hotpink;
+}
+
+.fill {
+  object-fit: fill;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.scale-down {
+  object-fit: scale-down;
 }

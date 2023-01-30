@@ -8,15 +8,45 @@
     <div class="_carousel">
       <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
         <slide *ngFor="let slide of slides; let index=index">
-<!--          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">-->
-          <img [src]="slide.image" class="news_image" alt="school image">
-          <div class="carousel-caption">
-            <h4>Slide {{index}}</h4>
-            <p>{{slide.text}}</p>
+          <div class="d-flex flex-row">
+            <div>
+
+              <img src="https://cegc.my.canva.site/main-mapit-website/images/a9c2b505fc162783c2e12dba777ecc99.jpg"
+                   class="news_image" alt="news image">
+            </div>
+            <div class="news_title">
+              I am a creative, patient, and licensed high school English teacher. I have excellent communication skills
+              and novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and
+              peers. I look forward to applying my skills and to contributing to high-quality secondary education at
+              your school.
+            </div>
           </div>
+          <!--          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">-->
+          <!--          <img [src]="slide.image" class="news_image" alt="news image">-->
+          <!--          <img src="https://cegc.my.canva.site/main-mapit-website/images/a9c2b505fc162783c2e12dba777ecc99.jpg"-->
+          <!--               class="news_image" alt="news image">-->
+
+          <!--          <image id="YnMhwQVqmt4NFej3" href="images/a9c2b505fc162783c2e12dba777ecc99.jpg" width="750.46904315px"-->
+          <!--                 height="500px" preserveAspectRatio="none"-->
+          <!--                 style="transform:translate(-31.45104757px, 0px) rotate(0deg);transform-origin:375.23452158px 250px;opacity:1.0;">-->
+          <!--          </image>-->
+          <!--          <div class="carousel-caption">-->
+
+          <!--            <h4>Slide {{index}}</h4>-->
+          <!--            <p>{{slide.text}}</p>-->
+          <!--          </div>-->
         </slide>
       </carousel>
     </div>
+
+
+    <img src="https://placeimg.com/200/500/any/grayscale" class="fill" />
+
+    <img src="https://placeimg.com/200/500/any/grayscale" class="contain" />
+
+    <img src="https://placeimg.com/200/500/any/grayscale" class="cover" />
+
+    <img src="https://placeimg.com/200/500/any/grayscale" class="scale-down" />
 
     <br/>
     <div>

@@ -19,8 +19,8 @@ import {CarouselConfig} from "ngx-bootstrap/carousel";
 export class HomepageComponent implements OnInit {
   slides = [
     {image: 'assets/logo.png', text: 'First'},
-    {image: 'assets/swagger.png', text: 'Second'},
-    {image: 'assets/django.png', text: 'Third'}
+    // {image: 'assets/swagger.png', text: 'Second'},
+    // {image: 'assets/django.png', text: 'Third'}
   ];
   noWrapSlides = false;
   showIndicator = true;
