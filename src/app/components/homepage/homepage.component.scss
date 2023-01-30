@@ -1,38 +1,18 @@
 ._news {
-  height: 400px;
-  min-width: 80%;
-  margin-top: 30px;
+  //height: 400px;
+  width: 80%;
+  margin-top: 80px;
+  padding: 5px;
 }
 
 ._carousel {
-  height: 400px;
+  height: 500px;
 }
 
 .news_image {
-  height: 400px;
-  width: 200px;
+  height: 480px;
+  width: 300px;
   object-fit: cover;
-}
-
-
-img {
-  width: 128px;
-  height: 128px;
-  border: 1px solid hotpink;
-}
-
-.fill {
-  object-fit: fill;
-}
-
-.contain {
-  object-fit: contain;
-}
-
-.cover {
-  object-fit: cover;
-}
-
-.scale-down {
-  object-fit: scale-down;
+  border-radius: 70px;
+  margin-left: 50px;
 }
