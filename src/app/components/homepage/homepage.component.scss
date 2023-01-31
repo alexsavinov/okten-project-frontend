@@ -1,10 +1,25 @@
 ._wrapper {
-  min-height: 81vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+._carousel {
+  height: 480px;
+}
+
+//icon-next
+.carousel-control-next-icon  li::before{
+  content: 'WW';
+  font-family: "Arial Black";
+}
+.carousel-indicators li::before {
+  //background-image: url(...);
+  /* OR */
+  content: 'WW';
+  font-family: "Arial Black";
+}
 ._news {
   //height: 400px;
   width: 80%;
@@ -13,9 +28,7 @@
   border: 1px solid black;
 }
 
-._carousel {
-  height: 480px;
-}
+
 
 ._news_item {
   display: flex;
