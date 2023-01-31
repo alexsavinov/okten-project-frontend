@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
+import {faFacebookF, faInstagram, faTelegram} from '@fortawesome/free-brands-svg-icons';
 
 import {DataService} from "../../modules/user/services";
 import * as pkg from 'package.json';
@@ -18,6 +19,10 @@ export class FooterComponent implements OnInit {
 
   version: string;
   email: string;
+
+  faFacebookF = faFacebookF;
+  faTelegram = faTelegram;
+  faInstagram = faInstagram;
 
   constructor(private dataService: DataService) {
   }

@@ -3,25 +3,50 @@
 <!--</div>-->
 
 <!--<footer class="footer fixed-bottom">-->
-<footer class="footer">
-  <div class="d-flex flex-row text-center align-items-center justify-content-between w-100">
+<footer class="_footer">
+  <!--  <div class="d-flex flex-row text-center align-items-center justify-content-between w-100">-->
 
-    <div class="navigate d-flex">
-      <a class="d-flex align-items-center" href="">
-        <img class="logo" src="assets/logo.png" alt="">
-      </a>
-    </div>
-
-<!--    <div *ngIf="email" class="ms-1 badge badge-secondary text-info d-flex align-items-center">-->
-<!--      {{email}}-->
-<!--    </div>-->
-
-
-<!--    <div *ngIf="version" class="ms-1 badge badge-secondary text-light d-flex align-items-center">-->
-<!--      <div class="v-line"></div>-->
-<!--      <div class="ms-2 me-2">ver {{version}}</div>-->
-<!--    </div>-->
-
+  <div class="_footer_item d-flex align-items-center">
+    <a href="">
+      <img class="_logo" src="assets/logo.png" alt="">
+    </a>
   </div>
+
+  <div class="_footer_item">
+    <div>2023 © Всі права захищені</div>
+    <div>Політика конфіденційності</div>
+  </div>
+
+  <div class="_footer_item">
+    Договір публічної оферти
+  </div>
+
+  <div class="_footer_item">
+    E-mail: mapit.com.ua@gmail.com
+  </div>
+
+  <!--  <div class="social-links d-flex align-items-center justify-content-evenly me-5 mt-3">-->
+  <div class="_footer_item _social_links">
+    <a href="https://t.me/map_IT_Ukraine" target="_blank">
+      <fa-icon [icon]="faTelegram" [inverse]="true" size="2x"></fa-icon>
+    </a>
+    <a href="https://www.instagram.com/_map_it" target="_blank">
+      <fa-icon [icon]="faInstagram" [inverse]="true" size="2x"></fa-icon>
+    </a>
+    <a href="https://www.facebook.com/MapIT.4kids/" target="_blank">
+      <fa-icon [icon]="faFacebookF" [inverse]="true" size="2x"></fa-icon>
+    </a>
+  </div>
+
+  <!--    <div *ngIf="email" class="ms-1 badge badge-secondary text-info d-flex align-items-center">-->
+  <!--      {{email}}-->
+  <!--    </div>-->
+
+
+  <!--    <div *ngIf="version" class="ms-1 badge badge-secondary text-light d-flex align-items-center">-->
+  <!--      <div class="v-line"></div>-->
+  <!--      <div class="ms-2 me-2">ver {{version}}</div>-->
+  <!--    </div>-->
+
 
 </footer>

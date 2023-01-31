@@ -1,8 +1,24 @@
-.footer {
-  height: 106px;
+._footer {
+  display: flex;
+  height: 130px;
   background-color: #135FAD;
+  justify-content: space-around;
 }
 
-.logo {
-  height: 94px;
+._logo {
+  height: 115px;
+}
+
+._footer_item {
+  display: flex;
+  //align-items: center;
+  align-self: center;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+}
+
+._social_links {
+  flex-direction: row;
+  gap: 20px;
 }
