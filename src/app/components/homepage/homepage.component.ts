@@ -11,14 +11,21 @@ import {CarouselConfig} from "ngx-bootstrap/carousel";
       useValue: {
         interval: 3000,
         noPause: false,
-        showIndicators: true
+        showIndicators: true,
+        pauseOnFocus: true,
+        isAnimated: true
       }
     }
   ],
 })
 export class HomepageComponent implements OnInit {
   slides = [
-    {image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
+    {image: 'assets/news_title.jpg', text: '1) I am a creative, patient, and licensed high school English teacher. ' +
+        'I have excellent communication skills\n' +
+        'and novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and\n' +
+        'peers. I look forward to applying my skills and to contributing to high-quality secondary education at\n' +
+        'your school.'},
+    {image: 'assets/news_title.jpg', text: '2) I am a creative, patient, and licensed high school English teacher. ' +
         'I have excellent communication skills\n' +
         'and novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and\n' +
         'peers. I look forward to applying my skills and to contributing to high-quality secondary education at\n' +

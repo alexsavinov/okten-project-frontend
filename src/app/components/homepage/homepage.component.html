@@ -1,21 +1,24 @@
-<div class="d-flex flex-column align-items-center" xmlns="http://www.w3.org/1999/html">
+<div class="_wrapper" xmlns="http://www.w3.org/1999/html">
 
   <!-- NEWS (slider 5 items) -->
-  <div class="_news border border-1">
+  <div class="_news">
 
-    <div class="_carousel bg-opacity-50 bg-danger">
+    <div class="_carousel">
       <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
         <slide *ngFor="let slide of slides; let index=index">
 
-          <div class="news_item">
+          <div class="_news_item">
 
             <div>
-              <img [src]="slide.image" class="news_image" alt="news image">
+              <img [src]="slide.image" class="_news_image" alt="news image">
             </div>
 
-            <div class="news_title">
-              <h4>News {{index}}</h4>
+            <div class="_news_title">
+<!--              <h4>News {{index}}</h4>-->
               <p>{{slide.text}}</p>
+              <div class="_news_more_info">
+                <a href="news/1">Більше інформації</a>
+              </div>
             </div>
 
           </div>
@@ -38,13 +41,13 @@
       </carousel>
     </div>
 
-    <br/>
-    <div>
-      <div class="checkbox">
-        <label><input type="checkbox" [(ngModel)]="noWrapSlides">Disable Slide Looping</label>
-        <label><input type="checkbox" [(ngModel)]="showIndicator">Enable Indicator</label>
-      </div>
-    </div>
+<!--    <br/>-->
+<!--    <div>-->
+<!--      <div class="checkbox">-->
+<!--        <label><input type="checkbox" [(ngModel)]="noWrapSlides">Disable Slide Looping</label>-->
+<!--        <label><input type="checkbox" [(ngModel)]="showIndicator">Enable Indicator</label>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 
   <!-- SCHOOLS (5 items: logo + name) -->
