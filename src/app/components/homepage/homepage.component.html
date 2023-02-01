@@ -23,34 +23,30 @@
 
           </div>
 
-          <!--          <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">-->
-          <!--          <img [src]="slide.image" class="news_image" alt="news image">-->
-          <!--          <img src="https://cegc.my.canva.site/main-mapit-website/images/a9c2b505fc162783c2e12dba777ecc99.jpg"-->
-          <!--               class="news_image" alt="news image">-->
-
-          <!--          <image id="YnMhwQVqmt4NFej3" href="images/a9c2b505fc162783c2e12dba777ecc99.jpg" width="750.46904315px"-->
-          <!--                 height="500px" preserveAspectRatio="none"-->
-          <!--                 style="transform:translate(-31.45104757px, 0px) rotate(0deg);transform-origin:375.23452158px 250px;opacity:1.0;">-->
-          <!--          </image>-->
-          <!--          <div class="carousel-caption">-->
-
-          <!--            <h4>Slide {{index}}</h4>-->
-          <!--            <p>{{slide.text}}</p>-->
-          <!--          </div>-->
         </slide>
       </carousel>
     </div>
 
-<!--    <br/>-->
-<!--    <div>-->
-<!--      <div class="checkbox">-->
-<!--        <label><input type="checkbox" [(ngModel)]="noWrapSlides">Disable Slide Looping</label>-->
-<!--        <label><input type="checkbox" [(ngModel)]="showIndicator">Enable Indicator</label>-->
-<!--      </div>-->
-<!--    </div>-->
   </div>
 
   <!-- SCHOOLS (5 items: logo + name) -->
+  <div class="_schools">
+
+    <div>НАВЧАННЯ</div>
+    <div>ІТ школи для дітей та підлітків</div>
+
+    <div class="_schools_items">
+
+      <div class="_schools_item" *ngFor="let school of schools; let index=index">
+        <img class="_schools_image" src="assets/school-{{index + 1}}.png" alt="school">
+        <div class="_schools_title">{{school.name}}</div>
+      </div>
+
+    </div>
+
+    <div>Каталог шкіл</div>
+  </div>
+
   <!-- ABOUT -->
   <!-- TESTS -->
   <!-- NEWS -->

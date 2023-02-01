@@ -51,6 +51,14 @@ export class HomepageComponent implements OnInit {
   noWrapSlides = false;
   showIndicator = true;
 
+  schools = [
+    {image: 'assets/school-1.png', name: 'GoITeens'},
+    {image: 'assets/school-2.png', name: 'Logika'},
+    {image: 'assets/school-3.png', name: 'Академія професій Майбутнього'},
+    {image: 'assets/school-4.png', name: 'ІТ Академія'},
+    {image: 'assets/school-5.png', name: 'Robocode'}
+  ];
+
   constructor() {
   }
 
