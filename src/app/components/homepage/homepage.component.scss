@@ -8,20 +8,25 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
+  font-size: 21px;
   //background-color: blanchedalmond;
 }
 
-._title_font {
+._header {
   color: #135fad;
+  font-weight: bold;
 }
 
-._title_big {
-  font-size: 30px;
+._header_big {
+  color: #135fad;
+  font-size: 45px;
 }
 
-.line {
-
+._line {
+  height: 0.5px;
+  width: 500px;
+  background-color: #135fad;
+  margin-top: 20px;
 }
 
 ._carousel {
@@ -47,11 +52,12 @@ a {
   width: 60px;
 }
 
+
 /* NEWS */
 
 ._news {
   //height: 400px;
-  width: 85%;
+  width: 80%;
   margin-top: 120px;
   //padding: 5px;
   //border: 1px solid #125699;
@@ -79,18 +85,19 @@ a {
   width: 45%;
 }
 
+
 /* SCHOOLS */
 
 ._schools {
   //border: 1px solid #5cb3fd;
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 80%;
   margin-top: 120px;
 }
 
 ._schools_items {
-  margin-top: 100px;
+  margin-top: 110px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -98,8 +105,8 @@ a {
 
 ._schools_item {
   //background-color: cadetblue;
-  height: 150px;
-  width: 180px;
+  height: 190px;
+  width: 190px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -107,9 +114,42 @@ a {
 }
 
 ._schools_image {
-  width: 155px;
+  width: 165px;
 }
 
 ._schools_title {
   text-align: center;
+}
+
+
+/* ABOUT */
+
+._about {
+  //border: 1px solid #5cb3fd;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 120px;
+}
+
+._about_items {
+  //margin-top: 110px;
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-between;
+  align-items: center;
+  gap: 200px;
+}
+
+._about_image {
+  width: 235px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 70px;
+}
+
+
+._empty {
+  display: flex;
+  height: 500px;
 }
