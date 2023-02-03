@@ -1,19 +1,19 @@
 <div class="_wrapper" xmlns="http://www.w3.org/1999/html">
 
-  <!-- NEWS (slider 5 items) -->
-  <div class="_news">
+  <!-- SLIDER (5 items) -->
+  <div class="_slider">
 
     <div class="_carousel">
       <carousel [noWrap]="noWrapSlides" [showIndicators]="showIndicator">
         <slide *ngFor="let slide of slides; let index=index">
 
-          <div class="_news_item">
+          <div class="_slider_item">
 
             <div>
-              <img [src]="slide.image" class="_news_image" alt="news image">
+              <img [src]="slide.image" class="_slider_image" alt="news image">
             </div>
 
-            <div class="_news_title">
+            <div class="_slider_title">
               <h4>News {{index}}</h4>
               <p>{{slide.text}}</p>
               <div class="text-end">
@@ -89,8 +89,13 @@
           novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and peers. I look
           forward to applying my skills and to contributing to high-quality secondary education at your school.
         </p>
+        <p>
+          I am a creative, patient, and licensed high school English teacher. I have excellent communication skills and
+          novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and peers. I look
+          forward to applying my skills and to contributing to high-quality secondary education at your school.
+        </p>
         <div class="text-end">
-          <a href="about">Більше інформації</a>
+          <a href="tests">Більше інформації</a>
         </div>
       </div>
 
@@ -104,7 +109,84 @@
   </div>
 
   <!-- NEWS -->
+  <div class="_news">
+
+    <div class="_header">ЦІКАВЕ</div>
+    <div class="_header_big">Новини світу ІТ навчання</div>
+    <div class="_line"></div>
+
+    <div class="_news_items">
+
+      <div class="_news_item">
+        <img class="_news_image" src="assets/news-0.jpg" alt="news">
+        <div class="_header">BELDEN ELEMENTARY OUTREACH</div>
+        <div class="_news_title">
+          I taught students, ages 7 to 10 years old, how to read and write in English.
+        </div>
+      </div>
+
+      <div class="_news_item">
+        <img class="_news_image" src="assets/news-1.jpg" alt="news">
+        <div class="_header">THE ROMRIELL CHARITY DRIVE</div>
+        <div class="_news_title">
+          I offered my writing skills to Romriell Foundation to boost awareness about their fundraiser.
+        </div>
+      </div>
+
+      <div class="_news_item">
+        <img class="_news_image" src="assets/news-2.jpg" alt="news">
+        <div class="_header">GRAYERVILLE HIGH SCHOOL OUTREACH</div>
+        <div class="_news_title">
+          I taught high school kids how to write for their college applications.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-end">
+      <a href="news">Більше новин</a>
+    </div>
+
+  </div>
+
   <!-- ARTICLES -->
+  <div class="_articles">
+
+    <div class="_header">КОРИСНЕ</div>
+    <div class="_header_big">Бібліотека</div>
+    <div class="_line"></div>
+
+    <div class="_articles_items">
+
+      <div class="_articles_item">
+        <img class="_articles_image" src="assets/article-0.jpg" alt="articles">
+        <div>
+          <div class="_header">КОРИСНЕ</div>
+          <div class="_articles_title">
+            "I am glad to have worked with them. They are intelligent and kind, and they can balance multiple
+            responsibilities at once. Any organization would be lucky to have them."
+          </div>
+        </div>
+      </div>
+
+      <div class="_articles_item">
+        <img class="_articles_image" src="assets/article-1.jpg" alt="articles">
+        <div>
+          <div class="_header">КОРИСНЕ</div>
+          <div class="_articles_title">
+            "I am lucky to have had them in my class. They are intelligent and kind, and they can balance multiple
+            responsibilities at once. Any organization would be lucky to have them."
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-end">
+      <a href="articles">Більше корисного</a>
+    </div>
+  </div>
+
 
   <div class="_empty"></div>
 
