@@ -29,6 +29,14 @@ a {
   margin-top: 20px;
 }
 
+._empty {
+  display: flex;
+  height: 500px;
+}
+
+
+/* CAROUSEL */
+
 ._carousel {
   height: 480px;
 }
@@ -149,7 +157,12 @@ a {
 }
 
 
-._empty {
+/* TESTS */
+
+._tests {
+  border: 1px solid #5cb3fd;
   display: flex;
-  height: 500px;
+  flex-direction: column;
+  width: 70%;
+  margin-top: 120px;
 }
