@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import {AccordionModule} from "ngx-bootstrap/accordion";
 import {AlertConfig, AlertModule} from "ngx-bootstrap/alert";
+import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 
 import {ActivateComponent} from './components/activate/activate.component';
 import {AppComponent} from './app.component';
@@ -49,7 +50,8 @@ import {RegisterComponent} from "./components/register/register.component";
     BrowserAnimationsModule,
     AlertModule,
     AccordionModule,
-    CarouselModule
+    CarouselModule,
+    CKEditorModule
   ],
   providers: [
     {

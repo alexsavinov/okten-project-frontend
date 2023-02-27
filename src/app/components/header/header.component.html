@@ -1,74 +1,44 @@
 <!--<div class="menu d-flex  justify-content-between border-bottom border-dark">-->
-<div class="menu d-flex border-bottom border-dark">
+<div class="_menu" xmlns="http://www.w3.org/1999/html">
 
   <!-- LOGO -->
   <div class="navigate d-flex">
     <a class="d-flex align-items-center" href="">
-      <img class="logo" src="assets/logo.png" alt="">
+      <img class="_logo" src="assets/logo.png" alt="">
     </a>
   </div>
 
   <!-- NAV BUTTONS -->
   <div class="navigate d-flex">
     <!--  <div routerLinkActive="active" class="ms-1 btn btn-sm btn-outline-primary">-->
-    <a class="ms-2 me-2 menu-item" routerLink="">
+    <a class="_menu-item" routerLink="">
       Про нас
     </a>
-    <a class="ms-2 me-2 menu-item" routerLink="">
+    <a class="_menu-item" routerLink="">
       Онлайн тест
     </a>
-    <a class="ms-2 me-2 menu-item" routerLink="">
+    <a class="_menu-item" routerLink="">
       Каталог шкіл
     </a>
-    <a class="ms-2 me-2 menu-item" routerLink="">
+    <a class="_menu-item" routerLink="">
       Новини
     </a>
-    <a class="ms-2 me-2 menu-item" routerLink="">
+    <a class="_menu-item" routerLink="">
       Бібліотека
     </a>
 
-<!--    <a class="ms-1 btn btn-sm link-btn btn-outline-secondary menu-item" routerLink="auth">-->
-<!--      Authentication-->
-<!--    </a>-->
-
-<!--    <a class="ms-1 btn btn-sm link-btn btn-outline-secondary menu-item" routerLink="users">-->
-<!--      Users-->
-<!--    </a>-->
-
-<!--    <a class="ms-1 btn btn-sm link-btn btn-outline-secondary menu-item" routerLink="schools">-->
-<!--      Schools-->
-<!--    </a>-->
-
-<!--    <a class="ms-1 btn btn-sm link-btn btn-outline-secondary menu-item" routerLink="courses">-->
-<!--      Courses-->
-<!--    </a>-->
   </div>
 
+  <div *ngIf="!isAuthorized" class="_user">
+    <a href="auth">
+      <fa-icon [icon]="faUser" size="lg"></fa-icon>
+    </a>
+  </div>
 
-  <!--  <div class="navigate d-flex">-->
-  <!--    <a class="btn btn-sm link-btn btn-outline-success d-flex align-items-center ms-4 " href="api/v1" target="_blank">-->
-  <!--      <img class="ico"-->
-  <!--           src="assets/swagger.png"-->
-  <!--           alt="">-->
-  <!--      Swagger-->
-  <!--    </a>-->
-
-  <!--    <a class="btn btn-sm link-btn btn-outline-success d-flex align-items-center ms-1" href="api/v1/admin"-->
-  <!--       target="_blank">-->
-  <!--      <img class="ico"-->
-  <!--           src="assets/django.png"-->
-  <!--           alt="">-->
-  <!--      Admin-->
-  <!--    </a>-->
-
-
-  <!--      <div *ngIf="version" class="ms-1 badge badge-secondary text-black d-flex align-items-center">-->
-  <!--        ver {{version}}-->
-  <!--      </div>-->
-  <!--    <div class="d-flex">-->
-  <!--    </div>-->
-  <!--  </div>-->
+  <div *ngIf="isAuthorized" class="_user">
+    <a (click)="logout()" class="_button">
+      <fa-icon [icon]="faSignOut" size="lg"></fa-icon>
+    </a>
+  </div>
 
 </div>
-
-<!--<div class="yellow-line d-flex"></div>-->

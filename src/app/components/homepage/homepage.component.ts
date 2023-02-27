@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CarouselConfig} from "ngx-bootstrap/carousel";
+import * as DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
+
+import {MyUploadAdapter} from './MyUploadAdapter';
 
 @Component({
   selector: 'app-homepage',
@@ -19,32 +22,45 @@ import {CarouselConfig} from "ngx-bootstrap/carousel";
   ],
 })
 export class HomepageComponent implements OnInit {
+
+  public Editor: any = DecoupledEditor;
+
   slides = [
-    {image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
+    {
+      image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
         'I have excellent communication skills\n' +
         'and novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and\n' +
         'peers. I look forward to applying my skills and to contributing to high-quality secondary education at\n' +
-        'your school.'},
-    {image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
+        'your school.'
+    },
+    {
+      image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
         'I have excellent communication skills\n' +
         'and novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and\n' +
         'peers. I look forward to applying my skills and to contributing to high-quality secondary education at\n' +
-        'your school.'},
-    {image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
+        'your school.'
+    },
+    {
+      image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
         'I have excellent communication skills\n' +
         'and novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and\n' +
         'peers. I look forward to applying my skills and to contributing to high-quality secondary education at\n' +
-        'your school.'},
-    {image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
+        'your school.'
+    },
+    {
+      image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
         'I have excellent communication skills\n' +
         'and novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and\n' +
         'peers. I look forward to applying my skills and to contributing to high-quality secondary education at\n' +
-        'your school.'},
-    {image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
+        'your school.'
+    },
+    {
+      image: 'assets/news_title.jpg', text: 'I am a creative, patient, and licensed high school English teacher. ' +
         'I have excellent communication skills\n' +
         'and novel approaches to creating lesson plans. I have a 90% satisfaction rate from both students and\n' +
         'peers. I look forward to applying my skills and to contributing to high-quality secondary education at\n' +
-        'your school.'},
+        'your school.'
+    },
     // {image: 'assets/news_title.jpg', text: 'Second'},
     // {image: 'assets/news_title.jpg', text: 'Third'}
   ];
@@ -58,6 +74,16 @@ export class HomepageComponent implements OnInit {
     {image: 'assets/school-4.png', name: 'ІТ Академія'},
     {image: 'assets/school-5.png', name: 'Robocode'}
   ];
+
+  public onReady(editor: any) {
+    editor.plugins.get("FileRepository").createUploadAdapter = (loader: any) => {
+      return new MyUploadAdapter(loader);
+    };
+    editor.ui.getEditableElement().parentElement.insertBefore(
+      editor.ui.view.toolbar.element,
+      editor.ui.getEditableElement()
+    );
+  }
 
   constructor() {
   }

@@ -3,53 +3,55 @@
 <!--  <div><label>password: <input type="text" formControlName="password"></label></div>-->
 <!--  <button (click)="login()">Login</button>-->
 <!--</form>-->
+<div class="_wrapper" xmlns="http://www.w3.org/1999/html">
 
-<!--<ng-template #content let-modal>-->
-<div class="card m-3 login bg-primary text-white">
+  <!--<ng-template #content let-modal>-->
+  <div class="card m-3 login bg-primary text-white">
 
-  <div class="card-title h5 m-3">Enter username (as email) and password:</div>
+    <div class="card-title h5 m-3">Enter username (as email) and password:</div>
 
-  <div class="card-body">
-    <!--  <div class="modal-header">-->
-    <!--    <h4 class="modal-title" id="modal-basic-title">User login</h4>-->
-    <!--&lt;!&ndash;    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>&ndash;&gt;-->
+    <div class="card-body">
+      <!--  <div class="modal-header">-->
+      <!--    <h4 class="modal-title" id="modal-basic-title">User login</h4>-->
+      <!--&lt;!&ndash;    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>&ndash;&gt;-->
+      <!--  </div>-->
+      <!--  <div class="modal-body">-->
+
+      <form [formGroup]="form">
+
+        <div class="mb-1">
+          <label for="email">Email</label>
+          <div class="input-group">
+            <input formControlName="email" class="form-control" id="email" placeholder="username@example.com">
+          </div>
+        </div>
+
+        <div class="mb-1">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <input formControlName="password" class="form-control" id="password" type="password">
+          </div>
+          <div *ngIf="errors" class="text-warning mt-1">{{errors}}</div>
+        </div>
+
+        <!--      <label>Email<input type="text" formControlName="email"></label>-->
+        <!--      <label>Password<input type="password" formControlName="password"></label>-->
+        <!--      <button type="button" (click)="save()" class="btn">Save</button>-->
+
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <!--        <button type="button" class="btn btn-primary" (click)="modal.close('Save btn')">Login</button>-->
+      <button [disabled]="isAuthorized" type="button" class="btn btn-dark" (click)="login()">Login</button>
+
+      <!--        <button type="button" class="btn btn-primary" (click)="modal.close()">Close</button>-->
+    </div>
+
     <!--  </div>-->
-    <!--  <div class="modal-body">-->
 
-    <form [formGroup]="form">
-
-      <div class="mb-1">
-        <label for="email">Email</label>
-        <div class="input-group">
-          <input formControlName="email" class="form-control" id="email" placeholder="username@example.com">
-        </div>
-      </div>
-
-      <div class="mb-1">
-        <label for="password">Password</label>
-        <div class="input-group">
-          <input formControlName="password" class="form-control" id="password" type="password">
-        </div>
-        <div *ngIf="errors" class="text-warning mt-1">{{errors}}</div>
-      </div>
-
-      <!--      <label>Email<input type="text" formControlName="email"></label>-->
-      <!--      <label>Password<input type="password" formControlName="password"></label>-->
-      <!--      <button type="button" (click)="save()" class="btn">Save</button>-->
-
-    </form>
   </div>
+  <!--</ng-template>-->
 
-  <div class="modal-footer">
-    <!--        <button type="button" class="btn btn-primary" (click)="modal.close('Save btn')">Login</button>-->
-    <button [disabled]="isAuthorized" type="button" class="btn btn-dark" (click)="login()">Login</button>
-
-    <!--        <button type="button" class="btn btn-primary" (click)="modal.close()">Close</button>-->
-  </div>
-
-  <!--  </div>-->
-
+  <div *ngIf="message" class="message m-3 h5">{{message}}</div>
 </div>
-<!--</ng-template>-->
-
-<div *ngIf="message" class="message m-3 h5">{{message}}</div>
